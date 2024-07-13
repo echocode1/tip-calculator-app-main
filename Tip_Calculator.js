@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
     let billInput = document.getElementById('amount-input');
-    const resetBtn = document.getElementById('reset-btn')
     const emptyBtn = document.getElementById('emptybtn')
     const resetBtn = document.getElementById('reset-btn')
     let humanInput = document.getElementById('num-of-people')
