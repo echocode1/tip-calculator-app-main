@@ -139,9 +139,9 @@ body{
     font-size: 2rem;
     color: var(--bacground__cl);
 }
-#reset-btn{
+#reset-btn,#emptybtn{
     width: 100%;
-    background-color: var(--bacground__cl);
+    background-color: hsl(182, 98%, 19%);;
     border: none;
     color: var(--btn__bg);
     font-size: 1.2rem;
@@ -150,7 +150,11 @@ body{
     border-radius: 5px;
     cursor: pointer;
     transition: 0.25s ease-out;
-    margin-top: 20px;
+    margin: 20px 0 10px 0;
+}
+#reset-btn{
+    background-color: var(--bacground__cl);
+    display: none;
 }
 #reset-btn:hover{
     background-color: hsl(172, 72%, 73%)
@@ -189,8 +193,12 @@ body{
     }
     #reset-btn{
         position: relative;
-        bottom: -27%;
+        bottom: -34%;
         padding: 15px;
+    }
+    #emptybtn{
+        position: relative;
+        bottom: -32%;
     }
     .tip-benefactor__input{
         position: relative;
@@ -198,5 +206,8 @@ body{
     }
     #amount-bold,#total-bold{
         font-size: 2.5rem;
+    }
+    #reset-btn{
+        display: none;
     }
 }
