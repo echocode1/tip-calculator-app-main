@@ -1,5 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     let billInput = document.getElementById('amount-input');
+    const resetBtn = document.getElementById('reset-btn')
+    const emptyBtn = document.getElementById('emptybtn')
+    const resetBtn = document.getElementById('reset-btn')
     let humanInput = document.getElementById('num-of-people')
     let errorResponse = document.getElementById('input-error_response')
     let tipAmount = document.getElementById('amount-bold');
@@ -24,10 +27,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 let t_result = bill + P_result
                 tipAmount.textContent =`$${ P_result.toFixed(2,0)}`;
                 totalAmount.textContent = `$${t_result.toFixed(2,0)}`;
+                resetBtn.style.display = 'block';
+                emptyBtn.style.display = 'none';
+                emptyBtn.style.bottom = '-37%';
             }
         })
     })
-    const resetBtn = document.getElementById('reset-btn')
+    
     resetBtn.onclick = () => {
         totalAmount.textContent = '0.00';
         tipAmount.textContent = '0.00';
@@ -36,6 +42,9 @@ document.addEventListener('DOMContentLoaded', () => {
         errorResponse.textContent = ''
         humanInput.style.border = 'none'
         custom.value = ''
+        resetBtn.style.display = 'none'
+        emptyBtn.style.display = 'block';
+        emptyBtn.style.bottom = '-37%'
     }
     let custom = document.getElementById('custom-input')
 
@@ -49,6 +58,9 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(t_result)
         tipAmount.textContent =`$${ P_result.toFixed(2,0)}`;
         totalAmount.textContent = `$${t_result.toFixed(2,0)}`;
+        emptyBtn.style.display = 'none'
+        resetBtn.style.display = 'block'
+        emptyBtn.style.bottom = '-37%'
     }
     custom.addEventListener('input',customInterest) ;
 })
