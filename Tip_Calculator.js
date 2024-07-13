@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     let billInput = document.getElementById('amount-input');
-    const emptyBtn = document.getElementById('emptybtn')
     const resetBtn = document.getElementById('reset-btn')
+    const emptyBtn = document.getElementById('emptybtn')
     let humanInput = document.getElementById('num-of-people')
     let errorResponse = document.getElementById('input-error_response')
     let tipAmount = document.getElementById('amount-bold');
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         })
     })
-    
+
     resetBtn.onclick = () => {
         totalAmount.textContent = '0.00';
         tipAmount.textContent = '0.00';
