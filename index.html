@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="tip-calculator.css">
+    <script src="Tip_Calculator.js"></script>
+
+    <title>Echo-code | Tip calculator app</title>
+
+  </head>
+  <body>
+    <div id="icon">
+      <img src="images/logo.svg" alt="logo">
+    </div>
+    <main class="calculator__container">
+      <div class="form">
+        <div class="bill-input__container">
+          <label for="amount-input">Bill</label><br>
+          <input type="number" placeholder="0" id="amount-input"><br>
+          <img src="images/icon-dollar.svg" alt="">
+        </div>
+        <div class="tip-percent__btn">
+          <p>Select Tip %</p>
+          <div class="percent__btn">
+            <button class="rate-btn">5%</button>
+            <button class="rate-btn">10%</button>
+            <button class="rate-btn">15%</button>
+            <button class="rate-btn">25%</button>
+            <button class="rate-btn">50%</button>
+            <input type="number" id="custom-input" placeholder="Custom">
+          </div>
+        </div>
+        <div class="tip-benefactor__input">
+          <div class="benefactor-label">
+            <label for="num-of-people">Number of People</label>
+            <p id="input-error_response"></p>
+          </div>
+          <input type="number" id="num-of-people" placeholder="0"><br>
+          <img src="images/icon-person.svg" alt="human-icon">
+        </div>
+      </div>
+      <div class="tip-display__section">
+        <div class="tip-amount">
+          <div class="amount-label">
+            <p id="bold-label1">Tip Amount</p>
+            <p id="light-label1">/ Person</p>
+          </div>
+          <p id="amount-bold">$4.27</p>
+        </div>
+        <div class="tip-total">
+          <div class="total-label">
+            <p id="bold-label2">Total</p>
+            <p id="light-label2">/ Person</p>
+          </div>
+          <p id="total-bold">$32.79</p>
+        </div>
+        <button id="reset-btn">RESET</button>
+      </div>
+    </main>
+  </body>
+</html>

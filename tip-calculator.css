@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --bacground__cl: hsl(172, 67%, 45%);
+    --btn__bg: hsl(183, 100%, 15%);
+    --text-cl: hsl(186, 14%, 43%);
+    --input__bg: hsl(184, 14%, 56%);
+    --cyan: hsl(185, 41%, 84%);
+    --lcyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body{
+    font-family: "Space Mono",monospace;
+    background-color: var(--cyan);
+    color: var(--text-cl);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#icon{
+    margin: 6vh 0px 4vh 0;
+}
+.calculator__container{
+    min-width: 325px;
+    width: 100vw;
+    background-color:var(--White);
+    padding: 30px 30px;
+    border-radius: 20px 20px 0 0;
+    position: relative;
+}
+.form{
+    padding: 10px 10px;
+}
+#amount-input,#num-of-people{
+    text-align: end;
+    width: 100%;
+    color: var(--btn__bg);
+    background-color: var(--lcyan);
+    border:none;
+    padding: 5px 0;
+    border-radius: 5px;
+    margin: 5px 0;
+    outline: var(--bacground__cl);
+}
+#amount-input:focus,
+#num-of-people:focus{
+    border: 2px solid var(--bacground__cl);
+}
+#amount-input,#num-of-people,
+.tip-percent__btn button{
+    font-size: 24px;
+    font-family: 'space mono';
+    font-weight: 700;
+    cursor: pointer;
+}
+.tip-benefactor__input img,
+.bill-input__container img{
+    position: relative;
+    top: -38px;
+    right: -20px;
+}
+.tip-percent__btn p{
+    margin-bottom: 15px;
+}
+.percent__btn{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px;
+}
+.rate-btn, #custom-input{
+    padding: 6px 0;
+    border-radius: 5px;
+    background-color: var(--btn__bg);
+    border: none;
+    color: var(--White);
+    border: none;
+    transition: 0.25s ease-out;
+}
+.tip-percent__btn .rate-btn:hover{
+    background-color: var(--bacground__cl);
+    color: var(--btn__bg);
+}
+#custom-input{
+    width: 100%;
+    background-color: var(--lcyan);
+    color: var(--text-cl);
+    outline: var(--bacground__cl);
+    transition: none;
+    padding: 5px 10px;
+    text-align: center;
+    font-family: 'space mono';
+    font-size: 24px;
+}
+::placeholder{
+    color: var(--text-cl);
+}
+#custom-input:hover{
+    border: 2px solid var(--bacground__cl);
+    outline: var(--bacground__cl);
+}
+.benefactor-label{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-top: 30px;
+}
+#input-error_response{
+    color: hsla(14, 92%, 67%, 0.884);
+}
+
+/* ---->display-section<---- */
+.tip-display__section{
+    background-color: var(--btn__bg);
+    padding:30px 20px 20px 20px;
+    border-radius: 15px;
+    font-size: 15px;
+}
+.tip-amount,.tip-total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+#bold-label1,#bold-label2{
+    color: var(--White);
+}
+#light-label1,#light-label2{
+    font-size: 12px;
+}
+#amount-bold,#total-bold{
+    font-size: 2rem;
+    color: var(--bacground__cl);
+}
+#reset-btn{
+    width: 100%;
+    background-color: var(--bacground__cl);
+    border: none;
+    color: var(--btn__bg);
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.25s ease-out;
+    margin-top: 20px;
+}
+#reset-btn:hover{
+    background-color: hsl(172, 72%, 73%)
+}
+
+/* ---->desktop style<---- */
+@media (min-width:576px){
+    body{
+        height: 100vh;
+    }
+    #icon{
+        margin: 0 0 7vh 0;
+    }
+    .calculator__container{
+        max-width: 800px;
+        display: flex;
+        height: auto;
+        border-radius: 20px;
+        margin-bottom: 7vh;
+        padding: 25px;
+    }
+    .form{
+        padding: 10px 40px 0 10px;
+        flex: 0 0 55%;
+        position: relative;
+    }
+    .tip-display__section{
+        flex: 0 0 45%;
+        padding: 40px 30px 0 30px;
+    }
+    .percent__btn{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .tip-percent__btn{
+        margin-top: 20px;
+    }
+    #reset-btn{
+        position: relative;
+        bottom: -27%;
+        padding: 15px;
+    }
+    .tip-benefactor__input{
+        position: relative;
+        bottom: -15px;
+    }
+    #amount-bold,#total-bold{
+        font-size: 2.5rem;
+    }
+}
